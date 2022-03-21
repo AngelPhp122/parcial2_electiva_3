@@ -30,21 +30,51 @@ Widget bodyPaginaSelecion(){
 
   return Column(
     mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[
-      Column(children: [
-        Container(
-          child: 
-          Center(child: 
-          Container(width: 200, height: 200, decoration: BoxDecoration(image: DecorationImage(image: AssetImage(Sillas[1]['img']))),)))],),
-          Column(children:
-           [Container(child: 
-           Center(child: 
-           Container(child: Row(children: [Container(child: Text("Silla guanaca"),alignment: Alignment.topLeft,
-           ),],),width: 400, height: 350, decoration: BoxDecoration(color: Colors.white,borderRadius: BorderRadius.circular(10)),),),),],)
-    ],
-  );
+      Column(
+        children: [Container(
+          width: 200, 
+          height: 200, 
+          decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage(Sillas[1]['img'])),
+          ),
+      ),Column(
+        children: 
+        [Container(    width: 400, 
+          height: 360, 
+          decoration: BoxDecoration(
+            color: Colors.white, borderRadius: BorderRadius.circular(15)
+          ),
+      child: Row(
+        children: [Container(
+          color: Colors.amber, 
+          height: 320, 
+          width: 180, 
+          child: Column(
+            children: [Container(
+              color: Colors.black12, 
+              width: 170,
+              height: 20, 
+              child: Text(Sillas[1]['title']),),Column(children: [Container(child: IconButton(onPressed: null, icon: Icon(Icons.star),alignment: Alignment.topLeft,),color: Colors.redAccent, height: 10, width: 190,)],)],),),
+              Row(
+            children: [Container(
+              color: Colors.blueAccent, 
+              height: 320, 
+              width: 180, 
+              child: Column(
+                children: [Container(color: Colors.black12,
+                width: 170,
+                height: 20, child: Text(Sillas[2]['precio']),alignment: Alignment.topRight,)],),)],
+              )],),
+              )],
+            )],
+            )
+    ]);
   
 }
 
+Widget strellasTop(){
 
+  return Container(height: 1,child: IconButton(onPressed: null, icon: Icon(Icons.star_rounded),));
+}
 
 }
