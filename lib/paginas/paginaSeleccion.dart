@@ -46,29 +46,49 @@ Widget bodyPaginaSelecion(){
           ),
       child: Row(
         children: [Container(
-          color: Colors.amber, 
-          height: 320, 
-          width: 180, 
+          color: Colors.indigo, 
+          height: 100, 
+          width: 280, 
           child: Column(
             children: [Container(
               color: Colors.black12, 
-              width: 170,
+              width: 250,
               height: 20, 
-              child: Text(Sillas[1]['title']),),Column(children: [Container(child: IconButton(onPressed: null, icon: Icon(Icons.star),alignment: Alignment.topLeft,),color: Colors.redAccent, height: 10, width: 190,)],)],),),
+              child: Text(Sillas[1]['title']),),
+              Column(
+                children: [Container(
+                  child: Row(children: [Container(child: IconButton(onPressed: null,
+                   icon: Icon(Icons.star,color: Colors.yellow, ), 
+                   alignment: Alignment.topLeft,),height: 10, width: 22,),
+                   Container(child: IconButton(onPressed: null,
+                   icon: Icon(Icons.star,color: Colors.yellow,), 
+                   alignment: Alignment.topLeft,),height: 10, width: 22),
+                   Container(child: IconButton(onPressed: null,
+                   icon: Icon(Icons.star,color: Colors.yellow,), 
+                   alignment: Alignment.topLeft,),height: 10, width: 22),
+                   Container(child: IconButton(onPressed: null,
+                   icon: Icon(Icons.star,color: Colors.yellow,), 
+                   alignment: Alignment.topLeft,),height: 10, width: 22),
+                   Container(child: IconButton(onPressed: null,
+                   icon: Icon(Icons.star,), 
+                   alignment: Alignment.topLeft,),height: 10, width: 22, ),],), 
+                   color: Colors.redAccent,
+                    height: 50,
+                     width: 500,),],),],),),Column(),
               Row(
             children: [Container(
               color: Colors.blueAccent, 
-              height: 320, 
-              width: 180, 
+              height: 100, 
+              width: 75, 
               child: Column(
                 children: [Container(color: Colors.black12,
                 width: 170,
-                height: 20, child: Text(Sillas[2]['precio']),alignment: Alignment.topRight,)],),)],
-              )],),
-              )],
-            )],
+                height: 20, child: Text(Sillas[2]['precio']),alignment: Alignment.topRight,),],),),],
+              ),],),
+              ),],
+            ),],
             )
-    ]);
+    ,],);
   
 }
 
