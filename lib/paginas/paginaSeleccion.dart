@@ -22,76 +22,61 @@ class _paginaSeleccionState extends State<paginaSeleccion> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey, appBar: AppBar(backgroundColor: Colors.transparent, leading: IconButton(onPressed: null, icon: Icon(Icons.arrow_back)),  actions: <Widget>[IconButton(onPressed: null, icon: Icon(Icons.shopping_bag))]),
-    body: bodyPaginaSelecion(), 
+    body: bodyPaginaSeleccion(), 
     );
   }
 
-Widget bodyPaginaSelecion(){
+Widget bodyPaginaSeleccion(){
 
-  return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    mainAxisSize: MainAxisSize.max,
-    children: <Widget>[
-      Column(
-        children: [Container(
-          width: 200, 
-          height: 200, 
-          decoration: BoxDecoration(
+  return Container(
+    child: Column(
+      children: [Container( 
+        width: 200, 
+        height: 200,
+        decoration: BoxDecoration(
             image: DecorationImage(image: AssetImage(Sillas[1]['img'])),
-          ),
-      ),Column(
-        children: 
-        [Container(    width: 400, 
-          height: 360, 
-          decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(15)
-          ),
-      child: Row(
-        children: [Container(
-          color: Colors.indigo, 
-          height: 100, 
-          width: 280, 
-          child: Column(
-            children: [Container(
-              color: Colors.black12, 
-              width: 250,
-              height: 20, 
-              child: Text(Sillas[1]['title']),),
-              Column(
-                children: [Container(
-                  child: Row(children: [Container(child: IconButton(onPressed: null,
-                   icon: Icon(Icons.star,color: Colors.yellow, ), 
-                   alignment: Alignment.topLeft,),height: 10, width: 22,),
-                   Container(child: IconButton(onPressed: null,
-                   icon: Icon(Icons.star,color: Colors.yellow,), 
-                   alignment: Alignment.topLeft,),height: 10, width: 22),
-                   Container(child: IconButton(onPressed: null,
-                   icon: Icon(Icons.star,color: Colors.yellow,), 
-                   alignment: Alignment.topLeft,),height: 10, width: 22),
-                   Container(child: IconButton(onPressed: null,
-                   icon: Icon(Icons.star,color: Colors.yellow,), 
-                   alignment: Alignment.topLeft,),height: 10, width: 22),
-                   Container(child: IconButton(onPressed: null,
-                   icon: Icon(Icons.star,), 
-                   alignment: Alignment.topLeft,),height: 10, width: 22, ),],), 
-                   color: Colors.redAccent,
-                    height: 2,
-                     width: 500,),],),],),),
-              Row(
-            children: [Container(
-              color: Colors.blueAccent, 
-              height: 100, 
-              width: 75, 
-              child: Column(
-                children: [Container(color: Colors.black12,
-                width: 170,
-                height: 20, child: Text(Sillas[2]['precio']),alignment: Alignment.topRight,),],),),],
-              ),],),
-              ),],
-            ),],
-            )
-    ,],);
-  
+          )),
+        Container( 
+        width: 400, 
+        height: 360,
+        decoration: BoxDecoration(
+            color: Colors.white, 
+            borderRadius: BorderRadius.circular(15)
+          ),child: Column(children: [Container(
+           
+            width: 370, 
+            height: 70, 
+            child: Row(
+              children: [Container(
+                 
+                width: 180, 
+                height: 15, 
+                child: Text(Sillas[1]['title']),),
+                Container(
+                width: 180, 
+                height: 15, child: Text(Sillas[2]['precio']),alignment: Alignment.topRight,)]
+                ,)
+                ,),Container( width: 500, height: 30, 
+                child: Row(
+                  children: [IconButton(onPressed: null, icon: Icon(Icons.star, color: Colors.yellow),alignment: Alignment.topLeft,),
+                  IconButton(onPressed: null, icon: Icon(Icons.star, color: Colors.yellow,),alignment: Alignment.topLeft,),
+                  IconButton(onPressed: null, icon: Icon(Icons.star, color: Colors.yellow),alignment: Alignment.topLeft,),
+                  IconButton(onPressed: null, icon: Icon(Icons.star, color: Colors.yellow),alignment: Alignment.topLeft,),
+                  IconButton(onPressed: null, icon: Icon(Icons.star,),alignment: Alignment.topLeft,),
+                  Text("200 Reviews", textAlign: TextAlign.right,)],mainAxisAlignment: MainAxisAlignment.start,), 
+                  ),
+                Container( width: 500, height: 150, child: Text("\nUna silla bien guanaca, esto es para llenar \nla descripcion\n\n\n\n\n\n   color"),),
+                Container( width: 500, height: 40,
+                child: Row(children: [IconButton(onPressed: null, icon: Icon(Icons.circle, color: Colors.green,)),
+                IconButton(onPressed: null, icon: Icon(Icons.circle, color: Colors.yellow,)),
+                IconButton(onPressed: null, icon: Icon(Icons.circle, color: Colors.red,))],mainAxisAlignment: MainAxisAlignment.start,),),
+                Container(width: 300, height: 50,child: RaisedButton(color: Colors.brown, child: Text("comprar"),onPressed: (){},),),]
+                ,)
+                ,)
+                ,],
+          mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisSize: MainAxisSize.max,),
+  );
 }
 
 }
