@@ -29,7 +29,9 @@ class _paginaSeleccionState extends State<paginaSeleccion> {
 Widget bodyPaginaSelecion(){
 
   return Column(
-    mainAxisAlignment: MainAxisAlignment.center,children: <Widget>[
+    mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisSize: MainAxisSize.max,
+    children: <Widget>[
       Column(
         children: [Container(
           width: 200, 
@@ -73,8 +75,8 @@ Widget bodyPaginaSelecion(){
                    icon: Icon(Icons.star,), 
                    alignment: Alignment.topLeft,),height: 10, width: 22, ),],), 
                    color: Colors.redAccent,
-                    height: 50,
-                     width: 500,),],),],),),Column(),
+                    height: 2,
+                     width: 500,),],),],),),
               Row(
             children: [Container(
               color: Colors.blueAccent, 
@@ -90,11 +92,6 @@ Widget bodyPaginaSelecion(){
             )
     ,],);
   
-}
-
-Widget strellasTop(){
-
-  return Container(height: 1,child: IconButton(onPressed: null, icon: Icon(Icons.star_rounded),));
 }
 
 }
