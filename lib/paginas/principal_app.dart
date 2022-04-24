@@ -16,7 +16,7 @@ class Principal extends StatefulWidget {
 
 class _PrincipalState extends State<Principal> {
  int activoMenu1 = 0;
-  int activoMenu2 = 2;
+ int activoMenu2 = 2;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,8 @@ class _PrincipalState extends State<Principal> {
      backgroundColor: Colors.white, appBar: AppBar( backgroundColor: Colors.transparent,
        leading: IconButton(onPressed: null, icon: Icon(Icons.menu)), 
        actions: <Widget>[IconButton(onPressed: null, icon: Icon(Icons.shopping_bag))],
-       title: Text('Comercial SIVAR'),),
+       title: Text('Comercial SIVAR'),
+       ),
        body: bodyParcial2());
   }
        
